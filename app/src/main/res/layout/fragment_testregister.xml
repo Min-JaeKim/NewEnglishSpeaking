@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Speaking Test"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:textColor="#6E6E6E" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/text1"
+                android:layout_below="@+id/text1"
+                android:layout_marginTop="3dp"
+                android:text="문제 등록"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:textColor="#6E6E6E" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@+id/text1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/speakeng" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_background"
+            android:layout_gravity="center_horizontal"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="25dp">
+
+            <!-- 문제 이름 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_testname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textLongMessage"
+                    android:textSize="13dp"
+                    android:hint="테스트 이름"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--레벨-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="레벨"
+                    android:gravity="center"
+                    android:textSize="13dp"/>
+                <RatingBar
+                    android:stepSize="1"
+                    android:id="@+id/level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"/>
+            </LinearLayout>
+            <!-- 문제 1 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_q1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:textSize="13dp"
+                    android:hint="문제 1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- 문제 한글 뜻 1 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_kq1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:inputType="textMultiLine"
+                    android:hint="문제 한글 해석 1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 모범답안 1 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_a1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:inputType="textMultiLine"
+                    android:hint="모범 답안 1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- 답안 한글 뜻 1 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_ka1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:inputType="textMultiLine"
+                    android:hint="답안 한글 해석 1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 문제 2 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_q2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:textSize="13dp"
+                    android:hint="문제 2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- 한글 뜻 2 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_kq2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:inputType="textMultiLine"
+                    android:hint="문제 한글 해석 2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 모범답안 2 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_a2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:inputType="textMultiLine"
+                    android:hint="모범 답안 2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 한글 뜻 2 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_ka2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:inputType="textMultiLine"
+                    android:hint="답안 한글 해석 2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 문제 3 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_q3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:textSize="13dp"
+                    android:hint="문제 3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- 한글 뜻 3 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_kq3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:inputType="textMultiLine"
+                    android:hint="문제 한글 해석 3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 모범답안 3 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_a3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:textSize="13dp"
+                    android:hint="모범 답안 3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 한글 뜻 3 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp">
+                <EditText android:id="@+id/input_ka3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:inputType="textMultiLine"
+                    android:hint="답안 한글 해석 3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <Button
+                android:id="@+id/register_btn"
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="등록"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/login_box" />
+
+            <Button
+                android:id="@+id/close_btn"
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="취소"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/login_box" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

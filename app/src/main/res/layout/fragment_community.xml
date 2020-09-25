@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/background">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Community"
+                    android:textSize="28dp"
+                    android:textStyle="bold"
+                    android:textColor="#6E6E6E" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/text1"
+                    android:layout_below="@+id/text1"
+                    android:layout_marginTop="3dp"
+                    android:text="묻고 답하기"
+                    android:textSize="28dp"
+                    android:textStyle="bold"
+                    android:textColor="#6E6E6E" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignTop="@+id/text1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/speakeng" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/layout_background"
+                android:orientation="vertical"
+                android:paddingLeft="25dp"
+                android:paddingTop="20dp"
+                android:paddingRight="25dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/logo"/>
+
+                    <TextView
+                        android:id="@+id/postID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/profileImage"
+                        android:layout_marginTop="10dp"
+                        android:text="작성자"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="#6E6E6E"/>
+
+                    <TextView
+                        android:id="@+id/postDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/profileImage"
+                        android:layout_below="@+id/postID"
+                        android:layout_marginTop="10dp"
+                        android:text="날짜"
+                        android:textSize="13dp"
+                        android:textColor="#6E6E6E"/>
+
+                    <TextView
+                        android:id="@id/postTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profileImage"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="제목"
+                        android:textColor="#6E6E6E"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/postTestName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/postTitle"
+                        android:layout_marginTop="5dp"
+                        android:text="테스트"
+                        android:textColor="#6E6E6E"
+                        android:textSize="13dp"/>
+
+                    <TextView
+                        android:id="@+id/postContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/postTestName"
+                        android:layout_marginTop="15dp"
+                        android:text="내용"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="#6E6E6E"/>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/postContent"
+                        android:background="?android:attr/listDivider"
+                        android:layout_marginVertical="20dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:scrollbars="vertical"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/layout_comment_input"
+        android:focusable="true"
+        android:clickable="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:paddingVertical="3dp">
+
+            <EditText
+                android:id="@+id/input_comment"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="댓글입력"
+                android:inputType="text"
+                android:outlineAmbientShadowColor="#fff"
+                android:outlineSpotShadowColor="#fff"
+                android:shadowColor="#fff"
+                android:textColor="#6E6E6E"
+                android:textColorHint="#6E6E6E"
+                android:textSize="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
+            android:tint="@color/colorAccent"
+            android:layout_marginBottom="2dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_send_black_24dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Community"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:textColor="#6E6E6E" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/text1"
+                android:layout_below="@+id/text1"
+                android:layout_marginTop="3dp"
+                android:text="게시물 등록"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:textColor="#6E6E6E" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@+id/text1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/speakeng" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_background"
+            android:paddingLeft="25dp"
+            android:paddingVertical="20dp"
+            android:paddingRight="25dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_input_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp">
+
+                <EditText
+                    android:id="@+id/input_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="제목"
+                    android:textSize="15dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/select_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/login_box"
+                    android:text="관련 테스트 선택"
+                    android:layout_marginVertical="3dp"/>
+                <TextView
+                    android:id="@+id/testName"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="1 test1"
+                    android:textSize="13dp"
+                    />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp">
+                <EditText
+                    android:id="@+id/input_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="내용"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:minLines="8"
+                    android:maxLines="15"
+                    android:scrollbars="vertical"
+                    android:textSize="15dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <Button
+                android:id="@+id/register_btn"
+                android:layout_gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:text="등록"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/login_box" />
+
+            <Button
+                android:id="@+id/close_btn"
+                android:layout_gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:text="취소"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/login_box" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>
